@@ -25,9 +25,13 @@ const WalmartApp = () => {
   return (
     <div className='cuadro'>
       <div className='botones'>
-        <Button text="" Icon={FaHome} onClick={handleHomeClick} />
-        <Button text="" Icon={FaGithub} onClick={handleGitHubClick} />
-        <Button text="" Icon={FaEnvelope} onClick={handleEmailClick} />
+        <div className='left'>
+          <Button text="" Icon={FaHome} onClick={handleHomeClick} />
+        </div>
+        <div className='right'>
+          <Button text="" Icon={FaGithub} onClick={handleGitHubClick} />
+          <Button text="" Icon={FaEnvelope} onClick={handleEmailClick} />
+        </div>
       </div>
       <Title text={'Walmart App'} Class={'welcome'}/>
       <div className='content'>
