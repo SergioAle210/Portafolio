@@ -8,7 +8,6 @@ import WalmartApp from '@pages/WalmartApp/WalmartApp'
 
 import './App.css'
 
-
 function App() {
 
   return (
