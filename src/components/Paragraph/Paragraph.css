@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap');
+
+.paragraph {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: #eaeaea;
+    font-family: 'Kameron', Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
