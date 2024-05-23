@@ -1,42 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+}
+
+.cuadro {
+  background-color: #000000;
+  width: 100%;
+  min-height: 600px; /* Asegura que ocupe toda la altura de la ventana */
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ffffff; 
+}
+
+.botones {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se coloquen uno debajo del otro en pantallas pequeñas */
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1; /* Para asegurar que el contenido ocupe el espacio disponible */
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  top: 20px;
+  left: 20px;
+  width: 50px; /* Ajusta el tamaño según sea necesario */
+  height: 50px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.project {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.project ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project ul li {
+  margin: 0.5rem 0;
+}
+
+.project ul li a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-weight: bold;
+}
+
+.project ul li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.paragraph-container {
+  width: 100%;
+  color: #f2f2f2;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
   }
-  to {
-    transform: rotate(360deg);
+
+  .project {
+    width: 25%;
+  }
+
+  .paragraph-container {
+    width: 70%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.footer {
+  padding: 20px 10px;
+  text-align: right;
+  color: #6c757d;
+  font-size: 0.9rem;
 }
