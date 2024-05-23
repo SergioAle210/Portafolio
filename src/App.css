@@ -11,7 +11,7 @@
 .cuadro {
   background-color: #000000;
   width: 100%;
-  min-height: 600px; /* Asegura que ocupe toda la altura de la ventana */
+  min-height: 600px;
   padding: 20px;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -22,22 +22,31 @@
 
 .botones {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.botones .left {
+  display: flex;
+}
+
+.botones .right {
+  display: flex;
+  gap: 10px;
 }
 
 .content {
   display: flex;
-  flex-direction: column; /* Asegura que los elementos se coloquen uno debajo del otro en pantallas pequeñas */
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  flex-grow: 1; /* Para asegurar que el contenido ocupe el espacio disponible */
+  flex-grow: 1; 
 }
 
 .logo {
   top: 20px;
   left: 20px;
-  width: 50px; /* Ajusta el tamaño según sea necesario */
+  width: 50px; 
   height: 50px;
 }
 
@@ -71,10 +80,9 @@
   color: #f2f2f2;
 }
 
-/* Media Query para pantallas pequeñas */
 @media (min-width: 768px) {
   .content {
-    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+    flex-direction: row;
   }
 
   .project {
