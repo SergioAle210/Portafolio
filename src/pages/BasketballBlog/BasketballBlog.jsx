@@ -91,6 +91,7 @@ const BasketballBlog = () => {
           <Paragraph text={'Create a basketball blog using React and Vite, featuring both frontend and basic backend development. The blog should allow users to view posts with titles, publication dates, and content, while being responsive across devices. An admin area at /admin, protected by a login system, should enable creating, viewing, updating, and deleting posts.'}
           />
           <CustomLink text={'View Repository'} href={'https://github.com/SergioAle210/Proyecto1-Web'}/>
+          <CustomLink text={'View Blog'} href={'https://blogbasketballsergio.netlify.app/#/'}/>
         </div>
         <div className='project'>
           <Title text={'Projects'} Class={'projects'}/>
