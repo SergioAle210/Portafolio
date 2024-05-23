@@ -1,0 +1,13 @@
+.custom-link {
+    color: #474f57; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado por defecto */
+    font-weight: bold; /* Negrita para resaltar el enlace */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Transiciones suaves para cambios de color y subrayado */
+    border-bottom: 2px solid transparent; /* Subrayado inicial transparente */
+    display: block; /* Asegura que el enlace ocupe toda la línea */
+    margin-bottom: 10px; /* Espacio inferior entre enlaces */
+  }
+  
+  .custom-link:hover {
+    color: #969696; /* Cambio de color al pasar el ratón */
+  }
