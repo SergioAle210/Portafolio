@@ -43,21 +43,21 @@ const Calculator = () => {
       cursor.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3)'
     }
 
-    const handleLinkHover = () => {
-      cursor.classList.add('cursor-link-hover')
+    const handleHover = () => {
+      cursor.classList.add('cursor-hover')
     }
 
-    const handleLinkOut = () => {
-      cursor.classList.remove('cursor-link-hover')
+    const handleOut = () => {
+      cursor.classList.remove('cursor-hover')
     }
 
     document.addEventListener('mousemove', moveCursor)
     document.addEventListener('mousedown', handleMouseDown)
     document.addEventListener('mouseup', handleMouseUp)
 
-    document.querySelectorAll('a').forEach(link => {
-      link.addEventListener('mouseover', handleLinkHover)
-      link.addEventListener('mouseout', handleLinkOut)
+    document.querySelectorAll('a, button').forEach(element => {
+      element.addEventListener('mouseover', handleHover)
+      element.addEventListener('mouseout', handleOut)
     })
 
     return () => {
@@ -65,9 +65,9 @@ const Calculator = () => {
       document.removeEventListener('mousedown', handleMouseDown)
       document.removeEventListener('mouseup', handleMouseUp)
 
-      document.querySelectorAll('a, button').forEach(link => {
-        link.removeEventListener('mouseover', handleLinkHover)
-        link.removeEventListener('mouseout', handleLinkOut)
+      document.querySelectorAll('a, button').forEach(element => {
+        element.removeEventListener('mouseover', handleHover)
+        element.removeEventListener('mouseout', handleOut)
       })
 
       document.body.removeChild(cursor)
